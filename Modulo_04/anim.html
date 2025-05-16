@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /*
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 0;
+        }
+        .animEsquerda{
+            transition: 1s;
+            margin-left: 90px;
+        }
+        */
+        .conteudo h2 span{
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .conteudo p{
+            overflow: hidden;
+            height: 10px;
+            transition: 1s;
+        }
+
+        .mostrar{
+            height: 200px !important;
+        }
+    </style>
+
+    <!-- <div class="box"></div> -->
+    <div class="conteudo">
+        <h2>Titulo do conteúdo <span>Ver mais!</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero fugit similique numquam minima, repellendus veniam tenetur sit aspernatur earum magni laboriosam illo. Pariatur quam nesciunt aspernatur porro optio omnis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam ipsa, sit, cupiditate eos aliquam, aut ad amet quo atque quam quas placeat reprehenderit maxime quasi natus cumque consequatur quos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum temporibus alias autem assumenda ex est nihil consequuntur! Nihil aut veritatis magnam voluptatibus nostrum illo soluta vitae dolor dignissimos inventore.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius amet cupiditate eveniet magnam distinctio et saepe accusantium praesentium molestias officiis ratione recusandae eligendi error eos, quos harum in cumque dignissimos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In, sequi ipsam corrupti nam dolor sit dolores quisquam officiis quas soluta, impedit perspiciatis, dolore obcaecati blanditiis quia fuga rem! Odio, cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione animi beatae, praesentium dolor cupiditate dolore recusandae quibusdam reprehenderit ipsum delectus repudiandae quos reiciendis et minus sequi nihil id corporis maiores!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro autem, ab ut dolor consequatur, maiores beatae perspiciatis quas dolores voluptatibus facere necessitatibus hic dignissimos ipsum magni quo. Vero, suscipit omnis!
+        </p>
+    </div>
+    <script>
+        /*
+        var box = document.querySelectorAll('.box')[0];
+        
+        setTimeout(()=>{
+            box.classList.add('animEsquerda');
+        },1000);
+        
+        box.addEventListener('click', ()=>{
+            box.classList.add('animEsquerda');
+        })
+        */
+        var span = document.querySelector('.conteudo span');
+        span.addEventListener('click', ()=>{
+            var conteudo = document.querySelector('.conteudo p');
+            if(conteudo.classList.contains('mostrar')){
+                span.innerHTML = 'Ver mais!';
+                conteudo.classList.remove('mostrar');
+            }else{
+                span.innerHTML = 'Ocultar!';
+                conteudo.classList.add('mostrar');
+            }
+        });
+    </script>
+</body>
+</html>

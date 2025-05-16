@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pessoa(){
+            this.nome = 'Guilherme';
+            this.idade = '27';
+            this.printNome = function(nome){
+                alert(nome)
+            }
+        }
+
+
+        function Animal(nome, peso){
+            if(nome == undefined){
+                this.nome = 'Cachorro';
+            }
+            if(peso == undefined){
+                this.peso = '5kg';
+            }
+            this.nome = nome;
+            this.peso = peso;
+        }
+
+        animal = new Animal('Cachorro', '12kg');
+
+        alert(animal.peso)
+
+    </script>
+</body>
+</html>

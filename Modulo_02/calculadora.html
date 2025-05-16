@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function calculadora(num1, num2, sinal){
+            var resp = 0;
+            if(sinal == "+"){
+                resp = num1 + num2;
+                alert(`A soma de ${num1} + ${num2} = ${resp}`);
+            }else if(sinal == "-"){
+                resp = num1 - num2;
+                alert(`A subtração de ${num1} - ${num2} = ${resp}`);
+            }else if(sinal == "*"){
+                resp = num1 * num2;
+                alert(`A multiplicação de ${num1} * ${num2} = ${resp}`);
+            }else{
+                resp = num1 / num2;
+                alert(`A divisão de ${num1} / ${num2} = ${resp}`);
+            }
+            return resp;
+        }
+
+        var num1 = prompt("Informe o primeiro número");
+        var sinal = prompt("Informe o sinal da sua operação (+, -, *, /)");
+        var num2 = prompt("Informe o segundo número");
+
+        while(sinal != "+" && sinal != "-" && sinal != "*" &&sinal != "/"){
+            alert("Informe um sinal válido (+, -, *, /)");
+            var sinal = prompt("Informe o sinal da sua operação (+, -, *, /)");
+        }
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        calculadora(num1, num2, sinal)
+    </script>
+</body>
+</html>
